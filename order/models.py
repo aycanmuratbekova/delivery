@@ -41,7 +41,7 @@ def get_totall(order_id):
         """если тип заказа: обслуживание"""
 
         for item in order_itmems:
-            total += item.product.price * item.product.amount
+            total += item.product.price * item.amount
         return total + int(total/100) * order_itmems[0].product.cafe.service_price
 
     elif order.order_type == 2:
